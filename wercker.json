@@ -1,0 +1,5 @@
+{
+    "customSteps" : {
+        "rake test:unit" : ["rake test:unit"]
+    }
+}
