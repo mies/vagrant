@@ -6,7 +6,7 @@
     },
     "customSteps" : {
         "rake tasks" : [
-        "rake test:unit",
+        "rake test:unit"
         ]
     }
 }
