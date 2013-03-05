@@ -1,5 +1,8 @@
 {
     "customSteps" : {
-        "rake test:unit" : ["rake test:unit"]
+        "rake tasks" : [
+        "rake test:unit",
+        "export RAILS_ENV=development"
+        ]
     }
 }
