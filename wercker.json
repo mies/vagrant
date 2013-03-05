@@ -1,11 +1,12 @@
 {
     "preInstallScripts" : {
         "set env" : [
-        "export RAILS_ENV=development"
+        "export RAILS_ENV=test"
         ]
     },
     "customSteps" : {
         "rake tasks" : [
+        "bundle install",
         "rake test:unit"
         ]
     }
