@@ -7,6 +7,7 @@
     "customSteps" : {
         "rake tasks" : [
         "bundle install",
+        "rbenv rehash",
         "rake test:unit"
         ]
     }
