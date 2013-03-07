@@ -1,6 +1,6 @@
 {
     "packages" : ["bsdtar"],
-    "bundleInstall" : {
+    "bundle install" : {
         "without" : "production"
     },
     "preInstallScripts" : {
