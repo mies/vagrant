@@ -10,7 +10,7 @@
     },
     "customSteps" : {
         "rake task" : [
-        "rake test:unit"
+        "bundle exec rake test:unit"
         ]
     }
 }
