@@ -4,32 +4,6 @@ build:
         # - script:
         #     name: apt-get install bsdtar
         #     code: sudo apt-get install -y bsdtar
-        - script:
-            name: install rbenv
-            code: |
-                echo "current directory content: \n$(ls -a ~/)"
-                
-                echo 'starting git clone...'
-                git clone --depth=1 --verbose https://github.com/sstephenson/rbenv.git ~/.rbenv
-                echo 'git clone complete'
-                
-                echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
-                echo 'eval "$(rbenv init -)"' >> ~/.bashrc
-                
-                echo 'source .bashrc'
-                source ~/.bashrc
-                
-                echo "type rbenv: $(type rbenv)"
-                                
-                echo 'starting ruby installation with rbenv...'
-                rbenv install 1.9.3-p327
-                echo 'ruby 1.9.3-p327 installed'
-                
-                echo 'rehashing...'
-                rbenv rehash
-                echo 'rbenv rehash complete'
-                
-                echo 'installed rbenv successfully'
         - bundle-install
         - script:
             name: rake test
