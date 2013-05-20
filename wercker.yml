@@ -17,7 +17,7 @@ build:
                 echo "update \$PATH to: $PATH"
                 
                 echo 'starting rbenv initialization...'
-                rbenv init -
+                eval rbenv init -
                 echo 'rbevn init completed'
                 
                 echo 'starting ruby installation with rbenv...'
