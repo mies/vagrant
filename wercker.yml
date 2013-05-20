@@ -1,7 +1,6 @@
 box: wercker/ruby
 build:
     steps:
-        - bundle-install
         # - script:
         #     name: apt-get install bsdtar
         #     code: sudo apt-get install -y bsdtar
@@ -13,6 +12,7 @@ build:
                 rbenv init
                 rbenv install 1.9.3-p327
                 rbenv rehash
+        - bundle-install
         - script:
             name: rake test
             code: |
