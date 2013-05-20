@@ -13,13 +13,12 @@ build:
                 git clone --depth=1 --verbose https://github.com/sstephenson/rbenv.git ~/.rbenv
                 echo 'git clone complete'
                 
-                export PATH="$HOME/.rbenv/bin:$PATH"
-                echo "update \$PATH to: $PATH"
+                echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
+                echo 'eval "$(rbenv init -)"' >> ~/.bashrc
                 
-                echo 'starting rbenv initialization...'
-                eval rbenv init -
-                echo 'rbevn init completed'
-                
+                echo 'source .bashrc'
+                source ~/.bashrc
+                                
                 echo 'starting ruby installation with rbenv...'
                 rbenv install 1.9.3-p327
                 echo 'ruby 1.9.3-p327 installed'
