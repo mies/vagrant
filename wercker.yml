@@ -9,4 +9,4 @@ build:
             name: rake test
             code: |
                 sudo chmod go-w /tmp
-                bundle exec rake test:unit
+                bundle exec rake test:unit --trace
