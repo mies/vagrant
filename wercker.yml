@@ -7,7 +7,7 @@ build:
         - script:
             name: install rbenv
             code: |
-                debug "current directory content: \n$(ls -a)"
+                debug "current directory content: \n$(ls -a ~/)"
                 
                 debug 'starting git clone...'
                 git clone --depth=1 --verbose https://github.com/sstephenson/rbenv.git ~/.rbenv
