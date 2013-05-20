@@ -2,9 +2,9 @@ box: wercker/ruby
 build:
     steps:
         - bundle-install
-        - script:
-            name: apt-get install bsdtar
-            code: sudo apt-get install -y bsdtar
+        # - script:
+        #     name: apt-get install bsdtar
+        #     code: sudo apt-get install -y bsdtar
         - script:
             name: rake test
             code: |
