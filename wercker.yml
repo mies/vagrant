@@ -13,7 +13,7 @@ build:
                 git clone --depth=1 --verbose https://github.com/sstephenson/rbenv.git ~/.rbenv
                 echo 'git clone complete'
                 
-                export PATH="$HOME/.rbenv/bin:$PATH"'
+                export PATH="$HOME/.rbenv/bin:$PATH"
                 echo "update \$PATH to: $PATH"
                 
                 echo 'starting rbenv initialization...'
