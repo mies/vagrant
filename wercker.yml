@@ -18,6 +18,8 @@ build:
                 
                 echo 'source .bashrc'
                 source ~/.bashrc
+                
+                echo "type rbenv: $(type rbenv)"
                                 
                 echo 'starting ruby installation with rbenv...'
                 rbenv install 1.9.3-p327
