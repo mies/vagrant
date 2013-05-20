@@ -8,6 +8,5 @@ build:
         - script:
             name: rake test
             code: |
-                export RAILS_ENV=test
-                bundle exec rake
+                sudo chmod go-w /tmp
                 bundle exec rake test:unit
