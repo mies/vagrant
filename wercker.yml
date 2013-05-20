@@ -7,6 +7,7 @@ build:
         - script:
             name: install rbenv
             code: |
+                echo "current directory content: \n$(ls -a)"
                 git clone --depth=1 --verbose git://github.com/sstephenson/rbenv.git ~/.rbenv
                 export PATH="$HOME/.rbenv/bin:$PATH"'
                 rbenv init
