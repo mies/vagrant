@@ -7,12 +7,28 @@ build:
         - script:
             name: install rbenv
             code: |
-                echo "current directory content: \n$(ls -a)"
-                git clone --depth=1 --verbose git://github.com/sstephenson/rbenv.git ~/.rbenv
+                debug "current directory content: \n$(ls -a)"
+                
+                debug 'starting git clone...'
+                git clone --depth=1 --verbose https://github.com/sstephenson/rbenv.git ~/.rbenv
+                debug 'git clone complete'
+                
                 export PATH="$HOME/.rbenv/bin:$PATH"'
+                debug "update \$PATH to: $PATH"
+                
+                debug 'starting rbenv initialization...'
                 rbenv init
+                debug 'rbevn init completed'
+                
+                debug 'starting ruby installation with rbenv...'
                 rbenv install 1.9.3-p327
+                debug 'ruby 1.9.3-p327 installed'
+                
+                debug 'rehashing...'
                 rbenv rehash
+                debug 'rbenv rehash complete'
+                
+                success 'installed rbenv successfully'
         - bundle-install
         - script:
             name: rake test
