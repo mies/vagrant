@@ -9,4 +9,5 @@ build:
             name: rake test
             code: |
                 export RAILS_ENV=test
+                bundle exec rake
                 bundle exec rake test:unit
